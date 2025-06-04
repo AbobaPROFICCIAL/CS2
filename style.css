@@ -257,7 +257,8 @@ h2::after {
     background-color: #3a3a3a;
 }
 
-.team-card img {
+/* Удалили стили для .team-card img */
+/* .team-card img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -269,7 +270,7 @@ h2::after {
 
 .team-card:hover img {
     border-color: var(--primary-color);
-}
+} */
 
 .team-card h3 {
     margin: 0 0 10px 0;
@@ -343,7 +344,8 @@ h2::after {
 }
 
 /* Стили для содержимого модального окна команды */
-.modal-team-logo {
+/* Удалили стили для modal-team-logo, так как его не будет */
+/* .modal-team-logo {
     display: block;
     width: 100px;
     height: 100px;
@@ -351,7 +353,7 @@ h2::after {
     object-fit: cover;
     margin: 0 auto 20px auto;
     border: 4px solid var(--accent-color);
-}
+} */
 
 #modal-team-name {
     color: var(--accent-color);
@@ -408,19 +410,19 @@ h2::after {
 /* Footer - Обновленные стили */
 .footer {
     background-color: var(--light-bg);
-    padding: 40px 0 20px; /* Увеличиваем верхний паддинг */
+    padding: 40px 0 20px;
     text-align: center;
     color: #aaa;
-    margin-top: 60px; /* Увеличиваем отступ сверху */
+    margin-top: 60px;
     border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-bottom: 30px; /* Отступ между основным контентом подвала и нижней строкой */
-    text-align: left; /* Выравнивание текста внутри секций */
+    margin-bottom: 30px;
+    text-align: left;
 }
 
 .footer-section h3 {
@@ -543,16 +545,16 @@ h2::after {
     }
 
     .footer-content {
-        grid-template-columns: 1fr; /* На мобильных устройствах - одна колонка */
-        text-align: center; /* Центрируем текст секций */
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .footer-section h3::after {
-        left: 50%; /* Центрируем подчеркивание заголовков */
+        left: 50%;
         transform: translateX(-50%);
     }
 
     .social-icons {
-        justify-content: center; /* Центрируем иконки соцсетей */
+        justify-content: center;
     }
 }

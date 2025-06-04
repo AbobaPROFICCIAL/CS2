@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             name: "Natus Vincere",
             region: "cis",
-            logo: "https://ibb.co/4ZHmN1d6",
             info: "Украинская киберспортивная организация, одна из самых успешных и узнаваемых в истории Counter-Strike. Известна своей стабильностью и множеством трофеев.",
             roster: [
                 { nickname: "s1mple", fullName: "Александр Костылев", role: "Снайпер", country: "Украина" },
@@ -133,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 2,
             name: "FaZe Clan",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/4/41/FaZe_Clan_2023.png",
             info: "Международная киберспортивная организация, обладающая одним из самых звездных составов в CS2. Известны своей агрессивной игрой и способностью к камбэкам.",
             roster: [
                 { nickname: "karrigan", fullName: "Финн Андерсен", role: "Капитан", country: "Дания" },
@@ -148,7 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             name: "Team Vitality",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/8/87/Team_Vitality_2023.png",
             info: "Французская киберспортивная организация, базирующаяся на феноменальном игроке ZywOo. Они постоянно находятся в топе мирового рейтинга.",
             roster: [
                 { nickname: "ZywOo", fullName: "Матье Эрбо", role: "Снайпер", country: "Франция" },
@@ -163,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 4,
             name: "Cloud9",
             region: "north-america",
-            logo: "https://liquipedia.net/commons/images/d/d7/Cloud9_2023.png",
             info: "Известная американская организация с сильным составом, объединяющим талантливых игроков из разных регионов. Они стремятся к мировому господству.",
             roster: [
                 { nickname: "Boombl4", fullName: "Кирилл Михайлов", role: "Капитан", country: "Россия" },
@@ -178,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 5,
             name: "G2 Esports",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/a/ae/G2_Esports_2023.png",
             info: "Европейская организация, известная своими яркими личностями и агрессивным стилем игры. Всегда являются претендентами на победу в любом турнире.",
             roster: [
                 { nickname: "m0NESY", fullName: "Илья Осипов", role: "Снайпер", country: "Россия" },
@@ -193,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 6,
             name: "ENCE",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/7/7b/ENCE_2023.png",
             info: "Финская организация, часто удивляющая своей стабильностью и способностью побеждать фаворитов.",
             roster: [
                 { nickname: "glaVee", fullName: "Марко Руссанен", role: "Капитан", country: "Финляндия" },
@@ -208,7 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 7,
             name: "MOUZ",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/c/c5/MOUZ_2023.png",
             info: "Молодая и перспективная европейская команда, известная своим агрессивным стилем и быстро растущими талантами.",
             roster: [
                 { nickname: "siuhy", fullName: "Камиль Шкарадек", role: "Капитан", country: "Польша" },
@@ -223,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 8,
             name: "Virtus.pro",
             region: "cis",
-            logo: "https://liquipedia.net/commons/images/d/d3/Virtus.pro_2024.png",
             info: "Одна из старейших и самых титулованных организаций в СНГ, всегда способная преподнести сюрприз на крупных турнирах.",
             roster: [
                 { nickname: "Jame", fullName: "Джамал Али", role: "Капитан / Снайпер", country: "Россия" },
@@ -238,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 9,
             name: "FURIA Esports",
             region: "south-america",
-            logo: "https://liquipedia.net/commons/images/a/ae/FURIA_Esports_2023.png",
             info: "Бразильская команда, известная своим агрессивным и непредсказуемым стилем игры, который может поставить в тупик любого противника.",
             roster: [
                 { nickname: "arT", fullName: "Андрей Пиовезан", role: "Капитан", country: "Бразилия" },
@@ -253,7 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 10,
             name: "Heroic",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/4/42/Heroic_2023.png",
             info: "Датская организация, известная своей строгой дисциплиной и командной работой. Всегда показывают стабильные результаты.",
             roster: [
                 { nickname: "cadiaN", fullName: "Каспер Мёллер", role: "Капитан / Снайпер", country: "Дания" },
@@ -268,7 +258,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 11,
             name: "Team Liquid",
             region: "north-america",
-            logo: "https://liquipedia.net/commons/images/f/f6/Team_Liquid_2023.png",
             info: "Одна из самых узнаваемых организаций в Северной Америке, стремящаяся вернуть себе былую славу в CS2.",
             roster: [
                 { nickname: "NAF", fullName: "Кит Маркович", role: "Райфлер", country: "Канада" },
@@ -283,7 +272,6 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 12,
             name: "OG",
             region: "europe",
-            logo: "https://liquipedia.net/commons/images/c/c9/OG_2023.png",
             info: "Европейская мультигейминговая организация, известная своими достижениями в Dota 2 и стремлением к успеху в CS2.",
             roster: [
                 { nickname: "F1KU", fullName: "Мацей Микулас", role: "Райфлер", country: "Польша" },

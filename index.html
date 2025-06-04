@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS2 Турниры и Команды</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo"><a href="#">CS2 Hub</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#tournaments">Турниры</a></li>
+                    <li><a href="#teams">Команды</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <section id="tournaments" class="section">
+            <h2>Предстоящие и Завершенные Турниры</h2>
+            <p class="section-subtitle">Погрузитесь в мир профессионального Counter-Strike 2: от грандиозных Мажоров до захватывающих лиг. Здесь вы найдете информацию о крупнейших событиях, призовых фондах и датах проведения.</p>
+
+            <div class="filters">
+                <input type="text" id="tournament-search" placeholder="Поиск по названию турнира или месту...">
+                <select id="tournament-status-filter">
+                    <option value="">Все статусы</option>
+                    <option value="Предстоящий">Предстоящий</option>
+                    <option value="В процессе">В процессе</option>
+                    <option value="Завершен">Завершен</option>
+                </select>
+                <input type="number" id="min-prize-pool" placeholder="Мин. призовой фонд ($)">
+                <button id="clear-tournament-filters">Очистить фильтры</button>
+            </div>
+            <div class="tournament-list">
+                </div>
+        </section>
+
+        <section id="teams" class="section">
+            <h2>Профессиональные Команды CS2</h2>
+            <p class="section-subtitle">Изучите профили лучших команд со всего мира. Узнайте их состав, регион и краткую историю, а также найдите своих любимых игроков.</p>
+            <div class="filters">
+                <input type="text" id="team-search" placeholder="Поиск по команде или игроку...">
+                <select id="team-region-filter">
+                    <option value="">Все регионы</option>
+                    <option value="europe">Европа</option>
+                    <option value="cis">СНГ</option>
+                    <option value="north-america">Северная Америка</option>
+                    <option value="asia">Азия</option>
+                    <option value="south-america">Южная Америка</option>
+                    <option value="oceania">Океания</option>
+                </select>
+                <button id="clear-team-filters">Очистить фильтры</button>
+            </div>
+            <div class="team-grid">
+                </div>
+        </section>
+    </main>
+
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-team-logo" src="" alt="Team Logo" class="modal-team-logo">
+            <h3 id="modal-team-name"></h3>
+            <p class="modal-subtitle" id="modal-team-info"></p>
+            <p><strong>Регион:</strong> <span id="modal-team-region"></span></p>
+
+            <h4>Текущий состав</h4>
+            <ul id="modal-team-roster">
+                </ul>
+
+            <h4>Последние достижения</h4>
+            <ul id="modal-team-achievements">
+                </ul>
+        </div>
+    </div>
+
+    <div id="tournament-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-tournament-modal">&times;</span>
+            <h3 id="modal-tournament-name"></h3>
+            <p class="modal-subtitle" id="modal-tournament-description"></p>
+            <p><i class="fas fa-calendar-alt"></i> <strong>Даты:</strong> <span id="modal-tournament-date"></span></p>
+            <p><i class="fas fa-dollar-sign"></i> <strong>Призовой фонд:</strong> <span id="modal-tournament-prize-pool"></span></p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Место:</strong> <span id="modal-tournament-location"></span></p>
+            <p><i class="fas fa-info-circle"></i> <strong>Статус:</strong> <span id="modal-tournament-status"></span></p>
+
+            <h4>Подробности</h4>
+            <ul id="modal-tournament-details">
+                </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section about-us">
+                <h3>О нас</h3>
+                <p><strong>CS2 Hub</strong> — ваш основной ресурс для актуальной информации о турнирах и командах Counter-Strike 2. Мы стремимся предоставлять точные данные и удобный интерфейс для всех фанатов киберспорта.</p>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="#tournaments">Турниры</a></li>
+                    <li><a href="#teams">Команды</a></li>
+                    <li><a href="#privacy-policy">Политика конфиденциальности</a></li>
+                    <li><a href="#terms-of-service">Условия использования</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-us">
+                <h3>Свяжитесь с нами</h3>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@cs2hub.com">info@cs2hub.com</a></p>
+                <p><i class="fas fa-phone"></i> Телефон: +7 (XXX) XXX-XX-XX</p>
+            </div>
+            <div class="footer-section social-media">
+                <h3>Мы в соцсетях</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CS2 Hub. Все права защищены. Информация предоставлена в ознакомительных целях.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

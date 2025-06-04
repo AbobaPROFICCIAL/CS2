@@ -1,0 +1,558 @@
+/* Общие стили */
+:root {
+    --primary-color: #007bff; /* Синий */
+    --secondary-color: #6c757d; /* Серый */
+    --accent-color: #ffc107; /* Желтый */
+    --dark-bg: #1a1a1a;
+    --light-bg: #2b2b2b;
+    --text-color: #f0f0f0;
+    --border-color: #444;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Header */
+.header {
+    background-color: var(--light-bg);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.logo a {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 0;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #ccc;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Карточки турниров */
+.tournament-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tournament-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+    position: relative;
+    cursor: pointer;
+}
+
+.tournament-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.tournament-card h3 {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.tournament-info {
+    padding: 20px;
+}
+
+.tournament-info p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.tournament-info p i {
+    margin-right: 10px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+/* Фильтры */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.filters input,
+.filters select,
+.filters button {
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.filters input::placeholder {
+    color: #aaa;
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.filters button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    flex-grow: 0;
+}
+
+.filters button:hover {
+    background-color: #0056b3;
+}
+
+/* Сетка команд */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.team-card {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.team-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    background-color: #3a3a3a;
+}
+
+.team-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--accent-color);
+    transition: border-color 0.3s ease;
+}
+
+.team-card:hover img {
+    border-color: var(--primary-color);
+}
+
+.team-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+    color: var(--accent-color);
+}
+
+.team-card p {
+    font-size: 0.95em;
+    color: #ccc;
+}
+
+/* Модальные окна (общие стили для team-modal и tournament-modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: var(--light-bg);
+    margin: auto;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для содержимого модального окна команды */
+.modal-team-logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    border: 4px solid var(--accent-color);
+}
+
+#modal-team-name {
+    color: var(--accent-color);
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Стили для содержимого модального окна турнира */
+#modal-tournament-name {
+    color: var(--accent-color);
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.modal-subtitle {
+    text-align: center;
+    color: #bbb;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.modal-content h4 {
+    color: var(--primary-color);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+#modal-team-roster, #modal-team-achievements, #modal-tournament-details {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#modal-team-roster li, #modal-team-achievements li, #modal-tournament-details li {
+    background-color: #333;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05em;
+}
+
+#modal-team-roster li i, #modal-team-achievements li i, #modal-tournament-details li i {
+    color: var(--primary-color);
+}
+
+
+/* Footer - Обновленные стили */
+.footer {
+    background-color: var(--light-bg);
+    padding: 40px 0 20px; /* Увеличиваем верхний паддинг */
+    text-align: center;
+    color: #aaa;
+    margin-top: 60px; /* Увеличиваем отступ сверху */
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
+    gap: 30px;
+    margin-bottom: 30px; /* Отступ между основным контентом подвала и нижней строкой */
+    text-align: left; /* Выравнивание текста внутри секций */
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+    left: 0;
+    bottom: 0;
+}
+
+.footer-section p, .footer-section li {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-section p i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #ccc;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+}
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        margin-top: 20px;
+    }
+
+    .main-nav li {
+        margin: 0 15px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .section-subtitle {
+        font-size: 0.95em;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .filters input,
+    .filters select,
+    .filters button {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    .filters button {
+        margin-bottom: 0;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #modal-team-name, #modal-tournament-name {
+        font-size: 1.8em;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr; /* На мобильных устройствах - одна колонка */
+        text-align: center; /* Центрируем текст секций */
+    }
+
+    .footer-section h3::after {
+        left: 50%; /* Центрируем подчеркивание заголовков */
+        transform: translateX(-50%);
+    }
+
+    .social-icons {
+        justify-content: center; /* Центрируем иконки соцсетей */
+    }
+}
